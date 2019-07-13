@@ -104,7 +104,7 @@ export default class PullToRefresh extends Component<Props, State> {
             onPanResponderReject: this.onResponderReject,
             onPanResponderMove: this.onPanResponderMove,
             onPanResponderRelease: this.onPanResponderRelease,
-            onPanResponderTerminationRequest: (evt, gestureState) => { console.log('onPanResponderTerminationRequest'); return true;},
+            onPanResponderTerminationRequest: (evt, gestureState) => { return true;},
             onPanResponderTerminate: this.onPanResponderTerminate,
         });
     }

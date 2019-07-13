@@ -2,18 +2,20 @@
   "name": "react-native-pull-to-refresh-custom",
   "version": "0.0.4",
   "description": " Custom pull to refresh Header supporting for React Native ScrollView/FlatList",
-  "main": "lib/PullToRefresh.js",
-  "types": "lib/PullToRefresh.d.ts",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc",
-    "prepublishOnly": "npm run build"
-  },
+  "main": "lib/commonjs/index.js",
+  "module": "lib/module/index.js",
+  "react-native": "src/index.js",
+  "types": "lib/typescript/src/index.d.ts",
   "files": [
-    "src",
-    "lib",
+    "lib/",
+    "src/",
     "README.md"
   ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "bob build",
+    "prepublishOnly": "npm run build"
+  },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
@@ -37,8 +39,24 @@
   },
   "homepage": "https://github.com/sophister/react-native-pull-to-refresh-custom#readme",
   "devDependencies": {
+    "@react-native-community/bob": "^0.6.1",
     "@types/react": "^16.8.23",
     "@types/react-native": "^0.57.65",
     "typescript": "^3.5.3"
+  },
+  "@react-native-community/bob": {
+    "source": "src",
+    "output": "lib",
+    "targets": [
+      [
+        "commonjs"
+      ],
+      "module",
+      "typescript"
+    ]
+  },
+  "peerDependencies": {
+    "react": "^16.8.6",
+    "react-native": "^0.60.3"
   }
 }
