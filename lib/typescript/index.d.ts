@@ -1,8 +1,8 @@
 /**
  * Container for ScrollView/FlatList, providing custom pull-to-refresh Header support
  */
-import { Component, ComponentType, RefAttributes } from 'react';
-import { ViewStyle, Animated, PanResponderInstance, GestureResponderEvent, PanResponderGestureState, NativeSyntheticEvent, NativeScrollEvent } from 'react-native';
+import { Component, ComponentType, RefAttributes } from "react";
+import { ViewStyle, Animated, PanResponderInstance, GestureResponderEvent, PanResponderGestureState, NativeSyntheticEvent, NativeScrollEvent } from "react-native";
 export interface PullToRefreshHeaderProps {
     pullDistance: number;
     percentAnimatedValue: Animated.AnimatedDivision;
